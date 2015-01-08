@@ -1,0 +1,43 @@
+{
+  "manifest_version": 2,
+
+  "name": "Jira Agile Cards",
+  "description": "This extension create agile cards from Jira issues, actually is activated only on Jira Cloud (AKA Jira OnDemand)",
+  "version": "1.0",
+  "icons": {
+    "16": "icon_16.png",
+    "48": "icon_48.png",
+    "128": "icon_128.png"
+  },
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent:": false
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.atlassian.net/*"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ],
+  "content_security_policy": "script-src 'self'; object-src 'self'",
+  "permissions": [
+    "storage",
+    "declarativeContent",
+    "tabs",
+    "https://*.atlassian.net/*"
+  ],
+  "page_action": {
+    "default_icon": {
+      "19": "icon_19.png",
+      "38": "icon_38.png"
+    },
+    "default_title": "Print Cards",
+    "default_popup": "popup.html"
+  }
+}

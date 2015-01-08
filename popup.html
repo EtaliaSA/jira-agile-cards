@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+  <head>
+    <title>JiraAgileCards</title>
+    <style>
+      #single-card {
+        display: none;
+      }
+      #saved-cards {
+        display: none;
+      }
+      #multi-card {
+        display: none;
+      }
+      body {
+        min-width: 357px;
+        overflow-x: hidden;
+      }
+    </style>
+    <script src="popup.js"></script>
+  </head>
+  <body>
+    <div id="unrecognized">
+      <h1>Please enter on a single issue or a list</h1>
+    </div>
+    <div id="single-card">
+      <h1>Single Card</h1>
+      <input type="hidden" id="xmlUrl"/>
+      <input type="hidden" id="issue-id"/>
+      <input type="hidden" id="issue-title"/>
+      <a href="#" id="xmlLink" target="_blank">XML</a><br/>
+      <button id="printSingleCard">Print</button>
+      <button id="addCard">Add</button>
+      <div id="saved-cards">
+        <h2>Saved cards</h2>
+        <ul id="cards-list"></ul>
+        <button id="printCards">Print</button>
+        <button id="emptyCards">Empty</button>
+      </div>
+    </div>
+    <div id="multi-card">
+      <h1>Multi Card</h1>
+    </div>
+  </body>
+</html>
+

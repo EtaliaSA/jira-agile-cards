@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+  <head>
+    <title>JiraAgileCards</title>
+    <style>
+      #card-template {
+        display: none;
+      }
+      body {
+        padding: 0;
+        font-family: sans-serif;
+      }
+      body * {
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+      .page {
+        width: 297mm;
+        padding: 0;
+      }
+      .page .card {
+        width: 135mm;
+        height: 120mm;
+        overflow: hidden;
+        float: left;
+        margin-right: 10mm;
+        margin-bottom: 16mm;
+        border: 1px solid gray;
+        position: relative;
+      }
+      .page .card section {
+        height: 97mm;
+        overflow: hidden;
+      }
+      .page .card header {
+        padding: 3mm;
+        min-height: 12mm;
+        border-bottom: 1px solid gray;
+        clear: both;
+      }
+      .page .card header img {
+        float: left;
+        width: 7mm;
+        height: 7mm;
+        margin-right: 2mm;
+      }
+      .page .card header span {
+        font-size: 7mm;
+      }
+      .page .card header span.id {
+        font-weight: bold;
+        margin-right: 2mm;
+      }
+      .page .card article {
+        padding: 3mm;
+        font-size: 6mm;
+      }
+      .page .card article p {
+        margin-top: 0;
+      }
+      .page .card footer {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        z-index: 1;
+        padding: 3mm;
+        font-size: 6mm;
+        border-top: 1px solid gray;
+      }
+      .page .card footer span {
+        display: inline-block;
+        width: 27mm;
+      }
+      .page .card .clear {
+        clear: both;
+      }
+    </style>
+    <script src="cards.js"></script>
+  </head>
+  <body>
+    <div id="cards" class="page">
+      <div id="card-template" class="card">
+        <section>
+          <header>
+            <img src="" />
+            <img src="" />
+            <span class="id"></span>
+            <span class="title"></span>
+            <div class="clear"></div>
+          </header>
+          <article>
+          </article>
+        </section>
+        <footer>
+          <span>Original:</span> <span class="original"></span>
+          <br />
+          <span>Remaining:</span> <span class="remaining"></span>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
