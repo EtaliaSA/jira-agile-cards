@@ -2,7 +2,7 @@
   "manifest_version": 2,
 
   "name": "Jira Agile Cards",
-  "description": "This extension create agile cards from Jira issues, actually is activated only on Jira Cloud (AKA Jira OnDemand)",
+  "description": "This extension create printable agile cards from Jira issues, actually is activated only on Jira Cloud (AKA Jira OnDemand)",
   "version": "1.0",
   "icons": {
     "16": "icon_16.png",
